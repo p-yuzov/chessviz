@@ -15,6 +15,7 @@ bin/*.*
 *.a
 
 # Visual Studio Files
+.vscode
 Debug
 Release
 *.suo
