@@ -1,0 +1,1 @@
+void initBoard(char b[8][8]);
