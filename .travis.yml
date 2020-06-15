@@ -8,4 +8,5 @@ language: cpp       # на практике разницы между специ
 os:
     # будем прогонять CI и на Linux, и на Mac OS X...
     - linux
-
+script:
+   make
