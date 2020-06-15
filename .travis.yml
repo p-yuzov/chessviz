@@ -1,4 +1,11 @@
-language: rust
-dist: xenial
-script:
-  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
+
+dist:     trusty    # используем Ubuntu 14.04 Trusty Tahr (а не 12.02 Precise Pangolin)
+sudo:     required  # используем Virtual Machine (а не Docker container)
+
+language: cpp       # на практике разницы между специфичным для C++ окружением
+                    # и, скажем, python -- никакой. Но пусть будет cpp.
+
+os:
+    # будем прогонять CI и на Linux, и на Mac OS X...
+    - linux
+
