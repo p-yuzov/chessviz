@@ -1,5 +1,5 @@
 
-dist:     lts       # используем Ubuntu 14.04 Trusty Tahr (а не 12.02 Precise Pangolin)
+dist:     lts       # используем Ubuntu 16.04 LTS
 sudo:     required  # используем Virtual Machine (а не Docker container)
 
 language: cpp       # на практике разницы между специфичным для C++ окружением
