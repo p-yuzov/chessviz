@@ -5,14 +5,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 char b[8][8];
 char abcIdx[8] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
 int main(int argc, char* argv[])
 {
     initBoard(b);
     char* input = NULL;
-    if (argc==1){    
+    if (argc == 1) {
         do {
             system("clear");
             printBoard(b, abcIdx);
@@ -22,24 +21,19 @@ int main(int argc, char* argv[])
                 move(input, b);
             }
         } while (strcmp(input, "n") != 0);
-    }
-    else{
+    } else {
         FILE* file;
-        file=fopen(argv[1],"r");
-        if (file==NULL)
-        {
+        file = fopen(argv[1], "r");
+        if (file == NULL) {
             printf("\nfile is null");
 
-        }
-        else
-        {
+        } else {
             input = malloc(12);
-            while (fgets(input,12,file)!=NULL){
+            while (fgets(input, 12, file) != NULL) {
                 move(input, b);
             }
-            printBoard(b,abcIdx);
+            printBoard(b, abcIdx);
             fclose(file);
         }
-        
     }
 }

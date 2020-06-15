@@ -59,18 +59,18 @@ void move(char* input, char b[8][8])
     int j1 = getIdxAbc(input[0]);
     int i2 = input[4] - '0';
     int j2 = getIdxAbc(input[3]);
-    char c = b[i1-1][j1];
+    char c = b[i1 - 1][j1];
     //рубим фигуру в клетке хода белых
-    b[i2-1][j2]=' ';
-    b[i1-1][j1] = b[i2-1][j2];
-    b[i2-1][j2] = c;
+    b[i2 - 1][j2] = ' ';
+    b[i1 - 1][j1] = b[i2 - 1][j2];
+    b[i2 - 1][j2] = c;
     i1 = input[7] - '0';
     j1 = getIdxAbc(input[6]);
     i2 = input[10] - '0';
     j2 = getIdxAbc(input[9]);
-    c = b[i1-1][j1];
+    c = b[i1 - 1][j1];
     //рубим фигуру в клетке хода черных
-    b[i2-1][j2] = ' ';
-    b[i1-1][j1] = b[i2-1][j2];
-    b[i2-1][j2] = c;
+    b[i2 - 1][j2] = ' ';
+    b[i1 - 1][j1] = b[i2 - 1][j2];
+    b[i2 - 1][j2] = c;
 }
