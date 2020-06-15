@@ -2,11 +2,8 @@
 dist:     lts       # используем Ubuntu 16.04 LTS
 sudo:     required  # используем Virtual Machine (а не Docker container)
 
-language: cpp       # на практике разницы между специфичным для C++ окружением
-                    # и, скажем, python -- никакой. Но пусть будет cpp.
-
+language: cpp       
 os:
-    # будем прогонять CI и на Linux, и на Mac OS X...
     - linux
 script:
    - git ls-files src/ | xargs clang-format -i && git diff --exit-code
