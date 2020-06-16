@@ -1,5 +1,6 @@
 dist:     xenial    # используем Ubuntu 16.04 LTS
 
 script:
-  - git ls-files src/ | xargs clang-format -i && git diff --exit-code  
+  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
+  - mkdir build && mkdir ./build/src && mkdir ./build/test  
   - make
