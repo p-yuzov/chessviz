@@ -2,6 +2,5 @@
 Language:        Cpp
 AccessModifierOffset: -4
 AlignAfterOpenBracket: AlwaysBreak
-AlignConsecutiveDeclarations: false
 ...
 
