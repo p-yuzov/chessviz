@@ -1,5 +1,4 @@
 dist:     xenial    # используем Ubuntu 16.04 LTS
-sudo:     required  # используем Virtual Machine (а не Docker container)
 
 language: cpp       
 os:
