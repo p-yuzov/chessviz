@@ -16,7 +16,7 @@ board_print_plain.o: $(srcdir)/board_print_plain.c $(srcdir)/board_print_plain.h
 board_read.o: $(srcdir)/board_read.c $(srcdir)/board_read.h 
 	$(COMPILER) -Wall -std=c99 -o $(builddir)/$@ -c $(srcdir)/board_read.c 
 test: $(testDir)/main.c ./thirdparty/ctest.h
-	$(COMPILER) -Wall -std=c99  -I thirdparty -o $(testBuilddir)/test.o -c $(testDir)/main.c
+	$(COMPILER) -Wall -std=c99  -I thirdparty -o $(testBuilddir)/test_board.o -c $(testDir)/main.c
 clean:
 	rm $(builddir)/*.*
 	rm $(testBuilddir)/*.*
