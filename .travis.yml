@@ -3,5 +3,9 @@ dist:     xenial    # используем Ubuntu 16.04 LTS
 language: cpp       
 os:
     - linux
+
+script:
+  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
 script:
    make
+   
